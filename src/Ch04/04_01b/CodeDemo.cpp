@@ -31,10 +31,10 @@ void printUnevenSplit(double totalBill, double perPerson, int numPeople){
     int diff = std::round(((perPerson * numPeople) - totalBill) * 100);
     if(diff > 0)
         // Syntax error: missing semicolon after the output statement.
-        std::cout << "FYI: We are " << diff << "¢ over." << std::endl
+        std::cout << "FYI: We are " << diff << "¢ over." << std::endl;
     if(diff < 0)
         // Syntax error: missing << operator.
-        std::cout << "FYI: We are " << -diff << "¢ short." std::endl;
+        std::cout << "FYI: We are " << -diff << "¢ short." << std::endl;
     std::cout << std::endl;
 }
 
@@ -55,6 +55,7 @@ int main(){
     
     // Syntax error: missing opening curly brace for the if statement's true branch.
     if(numPeople > 2)
+    {
         std::cout << std::endl << "Group discounts may apply!" << std::endl;
     } // Erroneous extra closing curly brace
     
