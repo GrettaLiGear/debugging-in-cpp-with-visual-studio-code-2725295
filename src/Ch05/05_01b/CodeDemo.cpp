@@ -20,8 +20,8 @@ void appendNode(Node ** head, Node ** tail, const std::string & newName){
     Node * newNode = new Node;
     newNode->name = newName;
     newNode->next = nullptr;
-    head[MAX_ENTRIES] = nullptr;
-    tail = nullptr;
+    //head[MAX_ENTRIES] = nullptr;
+    //tail = nullptr;
     if(*head == nullptr){
         *head = newNode;
         *tail = newNode;
@@ -61,7 +61,7 @@ int main(){
     Node * tail = nullptr;
     while(iss >> token){
         appendNode(&head, &tail, token);
-        iss.seekg(0);
+    //    iss.seekg(0);
     }
     
     std::cout << "The names in the linked list are: ";
