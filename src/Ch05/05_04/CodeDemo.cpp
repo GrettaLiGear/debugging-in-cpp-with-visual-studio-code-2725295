@@ -4,12 +4,12 @@
 
 #include <iostream>
 
-double power(double base, int exponent){
-    double result, *x = nullptr;
-    if(exponent == 0) 
-        result = 1;
-    result = base * power(base, exponent - 1);
-    return *x;
+double power(double base, int exponent) {
+    if (exponent == 0)
+        return 1.0;
+    if (exponent < 0)
+        return 1.0 / power(base, -exponent);
+    return base * power(base, exponent - 1);
 }
 
 int main(){
